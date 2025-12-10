@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+# Product Shop React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce frontend built with React, TypeScript, Material-UI (MUI), and Zustand.
+Users can browse products, filter them by category, view detailed product pages, manage a basket, and edit their personal profile.
 
-Currently, two official plugins are available:
+# Live Demo: product-card-frontend-azure.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#Technologies Used:
+- React 19
+- TypeScript
+- Material-UI (MUI)
+- Zustand for global state
+- Vite as the dev/build tool
 
-## React Compiler
+# Features
+1. Product Catalog
+ - Responsive product grid built with Material-UI
+ - Product details page with large image preview and thumbnails
+ - Product availability indicator
+ - Category-based filtering
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Search & Filtering
+ - Search bar integrated into the AppBar
+ - Dynamic category filter dropdown
 
-## Expanding the ESLint configuration
+ 3. Basket (Shopping Cart)
+ - Add or remove items from the basket
+ - Increase or decrease item quantity
+ - Live item counter displayed in the header
+ - Basket state persisted using Zustand
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+ 4. Personal Profile
+ - Editable user fields (name, email, phone)
+ - Each field has a dedicated ✏️ edit icon
+ - Inline editing with save and cancel controls
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+ 5. Add Product Form
+ - Allows adding new products to the store
+ - Includes fields for name, description, price, category, quantity, and image URLs
+ - Full validation (required fields, numeric checks)
+ - Fields highlight errors with MUI helper text
+ - Backend-ready structure (IDs are assigned by backend, not manually)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+ 6. UI & Styling
+ - Custom MUI theme 
+ - Consistent spacing and styling using MUI’s sx system
