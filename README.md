@@ -3,7 +3,8 @@
 A modern e-commerce frontend built with React, TypeScript, Material-UI (MUI), and Zustand.
 Users can browse products, filter them by category, view detailed product pages, manage a basket, and edit their personal profile.
 
-# Live Demo: product-card-frontend-azure.vercel.app
+# Live Demo: 
+👉 https://product-card-frontend-azure.vercel.app
 
 #Technologies Used:
 - React 19
